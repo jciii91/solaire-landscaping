@@ -1,19 +1,4 @@
-import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from "../../utils/helpers";
-
-function Nav(props) {
-  const {
-    categories = [],
-    setCurrentCategory,
-    currentCategory,
-    contactSelected,
-    setContactSelected
-  } = props;
-
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
-
+function Nav({sectionSelected, setSectionSelected}) {
   return (
     <header className="flex-row px-1">
       <h2>
@@ -24,21 +9,13 @@ function Nav(props) {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-              Services Offered
-            </a>
+            <a href="#about" className={`${sectionSelected === 'about' && 'activeSection'}`} onClick={ () => setSectionSelected('about') }>Services Offered</a>
           </li>
           <li className="mx-2">
-            <span onClick={() => {
-                setCurrentCategory(categories[0]);
-                setContactSelected(false);
-              }}
-            >
-              Gallery
-            </span>
+            <a href="#gallery" className={`${sectionSelected === 'gallery' && 'activeSection'}`} onClick={ () => setSectionSelected('gallery') }>Gallery</a>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)} >Contact</span>
+          <li className="mx-2">
+            <a href="#contact" className={`${sectionSelected === 'contact' && 'activeSection'}`} onClick={ () => setSectionSelected('contact') }>Contact</a>
           </li>
         </ul>
       </nav>
