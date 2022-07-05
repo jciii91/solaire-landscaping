@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import emailjs from '@emailjs/browser';
 
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -29,7 +30,18 @@ function ContactForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formState);
+    const emailTemplate = {
+      'to_name' : 'Everett',
+      'from_name' : formState.name,
+      'reply_to' : formState.email,
+      'message' : formState.message
+    }
+    emailjs.send('service_p0qq5r8','template_98e17vj', emailTemplate, 'J5M1IqHv_vh9-veS6')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (err) => {
+        console.log('FAILED...', err);
+      });
   }
 
   return (
