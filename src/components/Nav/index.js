@@ -2,7 +2,7 @@ function Nav({sectionSelected, setSectionSelected}) {
   return (
     <header className="flex-row px-1">
       <h2>
-        <a data-testid="link" href="/">
+        <a href="/solaire-landscaping">
           <span role="img" aria-label="camera"> ☀️</span> Solaire Landscaping
         </a>
       </h2>
