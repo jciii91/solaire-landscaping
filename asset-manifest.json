@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/solaire-landscaping/static/css/main.8832ea63.css",
-    "main.js": "/solaire-landscaping/static/js/main.c39e8376.js",
+    "main.js": "/solaire-landscaping/static/js/main.afed4381.js",
     "static/js/787.2a033e86.chunk.js": "/solaire-landscaping/static/js/787.2a033e86.chunk.js",
     "static/media/cover-image.jpg": "/solaire-landscaping/static/media/cover-image.395b80dd2b10cbd1404c.jpg",
     "static/media/0.jpg": "/solaire-landscaping/static/media/0.ca19768454f3097cd3f9.jpg",
@@ -11,11 +11,11 @@
     "static/media/4.jpg": "/solaire-landscaping/static/media/4.ca19768454f3097cd3f9.jpg",
     "index.html": "/solaire-landscaping/index.html",
     "main.8832ea63.css.map": "/solaire-landscaping/static/css/main.8832ea63.css.map",
-    "main.c39e8376.js.map": "/solaire-landscaping/static/js/main.c39e8376.js.map",
+    "main.afed4381.js.map": "/solaire-landscaping/static/js/main.afed4381.js.map",
     "787.2a033e86.chunk.js.map": "/solaire-landscaping/static/js/787.2a033e86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8832ea63.css",
-    "static/js/main.c39e8376.js"
+    "static/js/main.afed4381.js"
   ]
 }
